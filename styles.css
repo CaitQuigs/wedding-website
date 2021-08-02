@@ -19,11 +19,14 @@
     --text-heading: 1.75rem;
     --text-subtitle: 2.5rem;
     --text-title: 3rem;
-    --background-color: #E9EDF6;
-    --text-color: #222;
+    --background-color: #E#ABD6E3;
+    --text-color: #0C4557;
     --dark-background: #333333;
-    --light-text: #DDDDDD;
+    --header-background: #1DACD6;
+    --footer-background: #8A6606;
+    --light-text: #fff;
     --shadow-color: #000;
+    --b-c-blue: #1DACD6;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
 }
@@ -52,7 +55,7 @@ body {
 /* Fixed Header & Navigation Style */
 header {
     width: 100%;
-    background-color: var(--dark-background);
+    background-color: var(--header-background);
     position: fixed;
     top: 0;
     left: 0;
@@ -69,8 +72,11 @@ header * {
     display: inline;
 }
 
-#page-title {
+#page-title, .footer-title {
     color: var(--light-text);
+}
+
+#page-title {
     margin: 2rem 0 2rem 4rem;
 }
 
@@ -87,14 +93,23 @@ section {
 
 /* Footer Styles */
 footer {
-    background-color: var(--dark-background);
+    background-color: var(--footer-background);
     width: 100%;
-    height: 100px;
+    height: 25vh;
     text-align: center;
     color: var(--light-text);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.footer-title {
+    font-size: var(--text-sub-heading);
+}
+
+.footer-message {
+    margin-top: 10vh;
 }
 
 /* 3. Typography Styles 
@@ -131,43 +146,6 @@ p {
     font-size: var(--text-normal);
 }
 
-/* 4. Module Styles 
-================================ */
-
-/* Site Navigation */
-nav ul {
-    list-style: none;
-    float: right;
-    margin-right: 2rem;
-}
-
-nav ul li {
-    display: inline;
-}
-
-
-
-/* 5. Component Styles 
-================================ */
-/* Navigation Buttons */
-.button-nav {
-    color: var(--light-text);
-    background-color: var(--dark-background);
-    padding: 1rem;
-    margin: 0.5rem;
-    border: 2px solid var(--light-text);
-}
-
-a {
-    text-decoration: none;
-    font-size: var(--text-normal);
-    font-weight: bold;
-}
-
-a:hover {
-    box-shadow: inset 0.5em 0.5em 20px var(--shadow-color);
-}
-
 /* Text Styles */
 .article-text {
     font-size: 1rem;
@@ -185,4 +163,88 @@ a:hover {
     font-size: 1.25rem;
     font-style: italic;
     font-weight: 500;
+}
+
+/* 4. Module Styles 
+================================ */
+
+/* Site Navigation */
+nav ul {
+    list-style: none;
+    float: right;
+    margin-right: 2rem;
+}
+
+nav ul li {
+    display: inline;
+}
+
+.footer-nav nav{
+    float: none;
+    font-weight: normal;
+}
+
+
+/* 5. Component Styles 
+================================ */
+/* Navigation Buttons */
+.button-nav {
+    color: var(--light-text);
+    background-color: var(--dark-background);
+    padding: 1rem;
+    margin: 0.5rem;
+    border: 2px solid var(--light-text);
+}
+
+a {
+    color: var(--light-text);
+    text-decoration: none;
+    font-size: var(--text-normal);
+    font-weight: bold;
+}
+
+a:hover {
+    box-shadow: inset 0.5em 0.5em 20px var(--shadow-color);
+}
+
+.info-image {
+    width: 40vw;
+}
+
+/* Decoration Line */
+.decoration-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.decoration-line hr {
+    width: 45vw;
+    color: var(--b-c-blue);
+    height: 2px;
+    border: 1px solid var(--b-c-blue);
+    border-radius: 1px;
+}
+
+.decoration-img {
+    height: 5vh;
+    margin: 3vw 3vh;
+}
+
+/* Location Info Styles */
+.location-info {
+    display: flex;
+    flex-direction: row;
+}
+
+.location-text {
+    display: flex;
+    width: 45vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.location-image {
+    width: 45vw;
 }
