@@ -14,15 +14,17 @@
 }
 
 :root {
+    --text-small: 0.75rem;
     --text-normal: 1rem;
     --text-sub-heading: 1.5rem;
     --text-heading: 1.75rem;
     --text-subtitle: 2.5rem;
     --text-title: 3rem;
-    --background-color: #E#ABD6E3;
     --text-color: #0C4557;
     --dark-background: #333333;
     --header-background: #1DACD6;
+    --blue-background: #ABD6E3;
+    --white-background: #FFFFFF;
     --footer-background: #8A6606;
     --light-text: #fff;
     --shadow-color: #000;
@@ -40,7 +42,7 @@ html {
 }
 
 body {
-    background-color: var(--background-color);
+    background-color: var(--white-background);
     color: var(--text-color);
     height: 100%;
     margin: 0 auto;
@@ -82,7 +84,7 @@ header * {
 
 /* Main & Section Styles */
 main {
-    background-color: var(--background-color);
+    background-color: var(--white-background);
     width: 70%;
     margin: 130px auto;
 }
@@ -109,6 +111,7 @@ footer {
 }
 
 .footer-message {
+    font-size: var(--text-small);
     margin-top: 10vh;
 }
 
@@ -179,21 +182,29 @@ nav ul li {
     display: inline;
 }
 
+.nav-item, .footer-nav-item {
+    margin: 0 5vw;
+}
+
 .footer-nav nav{
     float: none;
+    font-weight: normal;
+}
+
+.footer-nav-item {
     font-weight: normal;
 }
 
 
 /* 5. Component Styles 
 ================================ */
-/* Navigation Buttons */
-.button-nav {
-    color: var(--light-text);
-    background-color: var(--dark-background);
+/* Buttons */
+.button {
+    color: var(--b-c-blue);
+    background-color: none;
     padding: 1rem;
     margin: 0.5rem;
-    border: 2px solid var(--light-text);
+    border: 2px solid var(--b-c-blue);
 }
 
 a {
@@ -204,12 +215,20 @@ a {
 }
 
 a:hover {
-    box-shadow: inset 0.5em 0.5em 20px var(--shadow-color);
+    color: var(--light-text);
+    background-color: var(--b-c-blue);
 }
 
 .info-image {
     width: 40vw;
 }
+
+/* Scrolling Basic Info */
+.scroll-info-box {
+    background-color: var(--white-background);
+    padding: 10vw 10vh;
+}
+
 
 /* Decoration Line */
 .decoration-line {
