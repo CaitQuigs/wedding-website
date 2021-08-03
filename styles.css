@@ -24,10 +24,10 @@
     --dark-background: #333333;
     --header-background: #1DACD6;
     --blue-background: rgba(169, 214, 227, 0.5);
-    --white-background: #FFFFFF;
+    --white: #FFFFFF;
     --footer-background: #8A6606;
     --light-text: #fff;
-    --shadow-color: #000;
+    --shadow-color: #0C4557;
     --b-c-blue: #1DACD6;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
@@ -42,11 +42,13 @@ html {
 }
 
 body {
-    background-color: var(--white-background);
+    background-color: var(--white);
     color: var(--text-color);
     height: 100%;
     margin: 0 auto;
     width: 100%;
+    display: flex;
+    flex-direction: column;
     text-rendering: optimizeLegibility;
     -website-font-smoothing: antialiased;
 }
@@ -84,22 +86,21 @@ header * {
 
 /* Main & Section Styles */
 main {
-    background-color: var(--white-background);
+    background-color: var(--white);
     width: 100%;
-    height: 100%;
     margin: 6.25rem 0;
 }
 
-#accommodations {
-    background-color: var(--blue-background);
+section {
+    margin: 0 auto;
 }
 
 .blue-background {
     background-color: var(--blue-background);
 }
 
-section {
-    margin: 3rem auto;
+#locations {
+    margin: 1rem 3rem;
 }
 
 /* Footer Styles */
@@ -200,6 +201,10 @@ nav ul li {
     margin: 0 5vw;
 }
 
+.nav-item:hover {
+    text-decoration: underline;
+}
+
 .footer-nav nav{
     float: none;
     font-weight: normal;
@@ -238,23 +243,42 @@ a:hover {
 }
 
 /* Scrolling Basic Info */
-#basic-info {
-    background: rgb(214,199,9);
-    background: -moz-linear-gradient(0deg, rgba(214,199,9,1) 0%, rgba(19,214,153,0.75) 22%, rgba(29,172,214,1) 44%, rgba(168,214,227,1) 48%, rgba(255,255,255,0.75) 52%, rgba(29,172,214,1) 100%);
-    background: -webkit-linear-gradient(0deg, rgba(214,199,9,1) 0%, rgba(19,214,153,0.75) 22%, rgba(29,172,214,1) 44%, rgba(168,214,227,1) 48%, rgba(255,255,255,0.75) 52%, rgba(29,172,214,1) 100%);
-    background: linear-gradient(0deg, rgba(214,199,9,1) 0%, rgba(19,214,153,0.75) 22%, rgba(29,172,214,1) 44%, rgba(168,214,227,1) 48%, rgba(255,255,255,0.75) 52%, rgba(29,172,214,1) 100%);
+.background-1 {
+    background: rgb(214,199,9) no-repeat center center fixed;
+    background: -moz-linear-gradient(0deg, rgba(214,199,9,1) 0%, rgba(19,214,153,0.75) 22%, rgba(29,172,214,1) 44%, rgba(168,214,227,1) 48%, rgba(255,255,255,0.75) 52%, rgba(29,172,214,1) 100%) no-repeat center center fixed;
+    background: -webkit-linear-gradient(0deg, rgba(214,199,9,1) 0%, rgba(19,214,153,0.75) 22%, rgba(29,172,214,1) 44%, rgba(168,214,227,1) 48%, rgba(255,255,255,0.75) 52%, rgba(29,172,214,1) 100%) no-repeat center center fixed;
+    background: linear-gradient(0deg, rgba(214,199,9,1) 0%, rgba(19,214,153,0.75) 22%, rgba(29,172,214,1) 44%, rgba(168,214,227,1) 48%, rgba(255,255,255,0.75) 52%, rgba(29,172,214,1) 100%) no-repeat center center fixed;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d6c709",endColorstr="#1dacd6",GradientType=1);
+    height: 100vh;
+    width: 100%;
+}
+
+.scroll-single {
+    background: none;
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .scroll-side-by-side {
+    background: none;
+    width: 100%;
+    height: 65vh;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
+.scroll-single>.scroll-info-box {
+    padding: 4rem 5rem;
+}
+
 .scroll-info-box {
-    background-color: var(--white-background);
+    background-color: var(--white);
     padding: 2rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin: 2rem;
@@ -266,6 +290,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 1rem;
 }
 
 .decoration-line hr {
@@ -285,18 +310,20 @@ a:hover {
 .location-info {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .location-text {
     display: flex;
-    width: 45vw;
+    width: 40vw;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
 .location-image {
-    width: 45vw;
+    width: 40vw;
 }
 
 /* Accommodations Styles */
@@ -321,7 +348,7 @@ a:hover {
 
 .lodgings-info-card, .travel-info-card, .getting-there-info-card {
     max-width: 40vw;
-    background-color: var(--white-background);
+    background-color: var(--white);
     padding: 1.5rem;
     margin: 1.5rem 0;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
