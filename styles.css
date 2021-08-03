@@ -23,7 +23,7 @@
     --text-color: #0C4557;
     --dark-background: #333333;
     --header-background: #1DACD6;
-    --blue-background: #ABD6E3;
+    --blue-background: rgba(169, 214, 227, 0.5);
     --white-background: #FFFFFF;
     --footer-background: #8A6606;
     --light-text: #fff;
@@ -74,19 +74,28 @@ header * {
     display: inline;
 }
 
-#page-title, .footer-title {
+#header-title, .footer-title {
     color: var(--light-text);
 }
 
-#page-title {
+#header-title {
     margin: 2rem 0 2rem 4rem;
 }
 
 /* Main & Section Styles */
 main {
     background-color: var(--white-background);
-    width: 70%;
-    margin: 130px auto;
+    width: 100%;
+    height: 100%;
+    margin: 6.25rem 0;
+}
+
+#accommodations {
+    background-color: var(--blue-background);
+}
+
+.blue-background {
+    background-color: var(--blue-background);
 }
 
 section {
@@ -119,6 +128,7 @@ footer {
 ================================ */
 h1, h2, h3, h4 {
     color: var(--text-color);
+    text-align: center;
 }
 
 h1 {
@@ -147,6 +157,10 @@ h4 {
 
 p {
     font-size: var(--text-normal);
+}
+
+.accommodations-title, .accommodations-subtitle {
+    text-align: center;
 }
 
 /* Text Styles */
@@ -224,9 +238,26 @@ a:hover {
 }
 
 /* Scrolling Basic Info */
+#basic-info {
+    background: rgb(214,199,9);
+    background: -moz-linear-gradient(0deg, rgba(214,199,9,1) 0%, rgba(19,214,153,0.75) 22%, rgba(29,172,214,1) 44%, rgba(168,214,227,1) 48%, rgba(255,255,255,0.75) 52%, rgba(29,172,214,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(214,199,9,1) 0%, rgba(19,214,153,0.75) 22%, rgba(29,172,214,1) 44%, rgba(168,214,227,1) 48%, rgba(255,255,255,0.75) 52%, rgba(29,172,214,1) 100%);
+    background: linear-gradient(0deg, rgba(214,199,9,1) 0%, rgba(19,214,153,0.75) 22%, rgba(29,172,214,1) 44%, rgba(168,214,227,1) 48%, rgba(255,255,255,0.75) 52%, rgba(29,172,214,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d6c709",endColorstr="#1dacd6",GradientType=1);
+}
+
+.scroll-side-by-side {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
 .scroll-info-box {
     background-color: var(--white-background);
-    padding: 10vw 10vh;
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 2rem;
 }
 
 
@@ -267,3 +298,32 @@ a:hover {
 .location-image {
     width: 45vw;
 }
+
+/* Accommodations Styles */
+
+.lodgings-section, .getting-there-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.lodgings-map {
+    max-width: 45vw;
+}
+
+.lodgings-info, .travel-info-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.lodgings-info-card, .travel-info-card, .getting-there-info-card {
+    max-width: 40vw;
+    background-color: var(--white-background);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
