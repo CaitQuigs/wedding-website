@@ -451,3 +451,29 @@ a {
     border: none;
     box-shadow: 0 5px 15px var(--shadow-color);
 }
+
+/* Booking Modals */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.modal-content {
+    background-color: var(--white);
+    margin: 15% auto;
+    padding: 1.5rem;
+    border: 2px solid var(--b-c-blue);
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

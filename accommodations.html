@@ -36,12 +36,12 @@
                 <div class="lodgings-info-card">
                     <h4 class="accommodations-subtitle">Cliffside Resort</h4>
                     <p>Cliffside Resort is located on the Long Island Sound, and is close to both the church and the reception. This location would be considered the more convenient location. Each condo includes 2 bedrooms, 2 bathrooms, a kitchen and a sleeper sofa. A total of up to 6 guests could stay here.</p>
-                    <button>How to Book</button>
+                    <button id="cliffside-button">How to Book</button>
                 </div>
                 <div class="lodgings-info-card">
                     <h4 class="accommodations-subtitle">Hotel Indigo East End</h4>
                     <p>Located in Riverhead, Hotel Indigo East End is approximately 30-40 minutes from the ceremony and reception locations. These rooms are traditional hotel rooms with one or two beds, depending on your choice.</p>
-                    <button>How to Book</button>
+                    <button id="indigo-button">How to Book</button>
                 </div>
             </div>
 
@@ -80,5 +80,28 @@
         </div>
         <p class="footer-message">&copy Quigley Web Development</p>
     </footer>
+
+    <!-- Booking Modals -->
+    <div id="cliffside-modal" class="modal">
+        <div class="modal-content">
+            <h3>Booking at Cliffside Resort</h3>
+            <p>To book at the Cliffside Resort, call 1-800-269-4140 between 9AM and 7PM. Please ask for the Monteserrato/Quigley Wedding rate. They will require a 50% deposit on booking. </p>
+            <p>The rates vary based on the room's view and are as follows:</p>
+            <ul>
+                <li>Water Side: $329/night</li>
+                <li>Water View: $359/night</li>
+                <li>Water Edge: $379/night</li>
+            </ul>
+            <button id="cliffside-close">Close</button>
+        </div>
+    </div>
+    <div id="indigo-modal" class="modal">
+        <div class="modal-content">
+            <h3>Booking at Hotel Indigo</h3>
+            <p>To book at Hotel Indigo, call 631-369-2200 ext 0. Please ask for the Quigley & Monteserrato Wedding Block rate. The block rate is $299 per night.</p>
+            <button id="indigo-close">Close</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
 </body>
 </html>
