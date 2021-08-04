@@ -53,6 +53,12 @@ body {
     -website-font-smoothing: antialiased;
 }
 
+@media screen and (max-width: 800px) {
+    :root {
+        font-size: 12px;
+    }
+}
+
 /* 2. Structural Styles 
 ================================ */
 
@@ -157,7 +163,55 @@ section {
     grid-area: 20 / 3 / span 4 / span 2;
 }
 
+@media screen and (max-width: 800px) {
+    .accommodations-grid {
+        padding: 7rem 4rem 4rem 4rem; 
+        grid-template-rows: repeat(39, 4rem);
+        grid-template-columns: 1fr;
+        grid-gap: 1rem 2rem;
+    }
 
+    #accommodations-title {
+        grid-area: 1 / 1 / 1 / span 1;
+    }
+    
+    #lodgings-title {
+        grid-area: 2/ 1 / 2 / span 1;
+    }
+    
+    .lodgings-label {
+        grid-area: 3 / 1 / 3 / span 1;
+    }
+    
+    .lodgings-map-container {
+        grid-area: 4 / 1 / 12 / span 1;
+    }
+    
+    .lodgings-info {
+        grid-area: 13 / 1 / 21 / span 1;
+    }
+    
+    #travel-title {
+        grid-area: 22 / 1 / span 1 / span 1;
+    }
+    
+    .travel-info-card {
+        grid-area: 23 / 1 / span 5 / span 1;
+    }
+    
+    #getting-there-title {
+        grid-area: 28 / 1 / span 1 / span 1;
+    }
+    
+    #by-air {
+        grid-area: 29 / 1 / span 5 / span 1;
+    }
+    
+    #by-land {
+        grid-area: 34 / 1 / span 4 / span 1;
+    }
+
+}
 
 /* Footer Styles */
 footer {
@@ -348,6 +402,19 @@ a {
     margin: 3rem;
 }
 
+@media screen and (max-width: 800px) {
+    .scroll-side-by-side {
+        flex-direction: column-reverse;
+    }
+    
+    .scroll-single>.scroll-info-box {
+        padding: 3rem;
+    }
+    .scroll-basic-info {
+        margin: 1.5rem;
+    }
+}
+
 .scroll-more-box {
     color: var(--white);
     background: none;
@@ -403,6 +470,13 @@ a {
     width: 40vw;
 }
 
+@media screen and (max-width: 800px) {
+    .location-info {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
 /* Accommodations Styles */
 
 .lodgings-map-container {
@@ -428,6 +502,12 @@ a {
 
 .travel-info-card {
     padding: 3rem;
+}
+
+@media screen and (max-width: 800px) {
+    .travel-info-card {
+        padding: 2rem;
+    }
 }
 
 .getting-there-info-card {
@@ -476,4 +556,10 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+@media screen and (max-width: 800px) {
+    .modal-content {
+        margin: 35% auto;
+    }
 }
