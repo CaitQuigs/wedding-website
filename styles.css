@@ -95,8 +95,7 @@ header * {
 /* Main & Section Styles */
 main {
     background-color: var(--white);
-    width: 100%;
-    margin: 6.25rem 0;
+    margin: 6.25rem 0 0 0;
 }
 
 section {
@@ -105,19 +104,26 @@ section {
 
 .blue-background {
     background-color: var(--blue-background);
+    margin: 0;
+    padding: 7rem 4rem 4rem 4rem; 
 }
 
 #locations {
-    margin: 1rem 3rem;
+    margin: 1rem 3rem 2rem 3rem;
+}
+
+#faq-main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Accommodations Page Grid */
 .accommodations-grid {
     display: grid;
-    width: 100%;
     height: auto;
-    margin: 0;
-    padding: 7rem 4rem 4rem 4rem; 
     grid-template-rows: repeat(24, 4rem);
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem 2rem;
@@ -533,7 +539,6 @@ a {
 }
 
 /* Booking Modals */
-
 .modal {
     display: none;
     position: fixed;
@@ -561,5 +566,41 @@ a {
 @media screen and (max-width: 800px) {
     .modal-content {
         margin: 35% auto;
+    }
+}
+
+/* FAQ Styles */
+#faq-title {
+    margin: 2rem 0 0 0;
+}
+.question-container {
+    display: flex;
+    width: 75%;
+    background-color: var(--white);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+    box-shadow: 0px 5px 15px var(--shadow-color);
+    margin: 4rem;
+}
+
+.question {
+    font-size: var(--text-heading);
+    text-decoration: none;
+}
+
+.answer {
+    font-size: var(--text-normal);
+}
+
+.faq-link {
+    color: var(--text-color);
+}
+
+@media screen and (max-width: 800px) {
+    .question-container {
+        padding: 1rem;
+        margin: 2rem 1rem;
     }
 }
