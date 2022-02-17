@@ -102,13 +102,18 @@ section {
 }
 
 .blue-background {
-    background-color: var(--blue-background);
+    /* background-color: var(--blue-background); */
+    background: rgb(188,231,253);
+    background: -moz-linear-gradient(135deg, rgba(188,231,253,1) 0%, rgba(29,172,214,1) 50%, rgba(188,231,253,1) 100%);
+    background: -webkit-linear-gradient(135deg, rgba(188,231,253,1) 0%, rgba(29,172,214,1) 50%, rgba(188,231,253,1) 100%);
+    background: linear-gradient(135deg, rgba(188,231,253,1) 0%, rgba(29,172,214,1) 50%, rgba(188,231,253,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#bce7fd",endColorstr="#bce7fd",GradientType=1);
     margin: 0;
     padding: 7rem 4rem 4rem 4rem; 
 }
 
 #locations {
-    margin: 1rem 3rem 2rem 3rem;
+    margin: 1rem 3rem 4rem 3rem;
 }
 
 #faq-main {
@@ -464,6 +469,17 @@ a {
     margin: 3vw 3vh;
 }
 
+/* Glassmorphism */
+
+.glassmorph {
+    background: rgba( 255, 255, 255, 0.6 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 2.5px );
+    -webkit-backdrop-filter: blur( 2.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
 /* Location Info Styles */
 .location-info {
     display: flex;
@@ -510,7 +526,7 @@ a {
 
 .lodgings-info-card, .travel-info-card, .getting-there-info-card {
     width: 100%;
-    background-color: var(--white);
+    /* background-color: var(--white); */
     box-shadow: 0px 5px 15px var(--shadow-color);
 }
 
@@ -615,7 +631,7 @@ a {
 
 /* RSVP Styles */
 .rsvp-info-card {
-    background-color: var(--white);
+    /* background-color: var(--white); */
     display: flex;
     flex-direction: column;
     justify-content: center;
