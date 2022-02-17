@@ -1,13 +1,12 @@
-/* Site Style Sheet
-    1. Global Styles
-    2. Structure Styles
-    3. Typography Styles
-    4. Module Styles
-    5. Component Styles
+/* RSVP Style Sheet
+    1. Structure Styles
+    2. Typography Styles
+    3. Form Styles
+    4. Component Styles
 
 ================================ */
 
-/* 1. Global Styles 
+/* 1. Structure Styles 
 ================================ */
 * {
     box-sizing: border-box;
@@ -113,6 +112,15 @@ section {
 }
 
 #faq-main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#rsvp-main {
+    height: 60vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -344,7 +352,7 @@ img, .lodgings-map {
 }
 
 /* Buttons */
-button {
+button, .button {
     color: var(--b-c-blue);
     background-color: var(--white);
     padding: 1rem;
@@ -353,7 +361,7 @@ button {
     border: 5px solid var(--b-c-blue);
 }
 
-button:hover {
+button:hover, .button:hover {
     color: var(--light-text);
     background-color: var(--b-c-blue);
 }
@@ -570,7 +578,7 @@ a {
 }
 
 /* FAQ Styles */
-#faq-title {
+#faq-title, #rsvp-title {
     margin: 2rem 0 0 0;
 }
 .question-container {
@@ -602,5 +610,24 @@ a {
     .question-container {
         padding: 1rem;
         margin: 2rem 1rem;
+    }
+}
+
+/* RSVP Styles */
+.rsvp-info-card {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-shadow: 0px 5px 15px var(--shadow-color);
+    margin: 2rem;
+    padding: 5rem 8rem;
+}
+
+@media screen and (max-width: 800px) {
+    .rsvp-info-card {
+        padding: 3rem;
     }
 }
