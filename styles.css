@@ -104,9 +104,9 @@ section {
 .blue-background {
     /* background-color: var(--blue-background); */
     background: rgb(188,231,253);
-    background: -moz-linear-gradient(135deg, rgba(188,231,253,1) 0%, rgba(29,172,214,1) 50%, rgba(188,231,253,1) 100%);
-    background: -webkit-linear-gradient(135deg, rgba(188,231,253,1) 0%, rgba(29,172,214,1) 50%, rgba(188,231,253,1) 100%);
-    background: linear-gradient(135deg, rgba(188,231,253,1) 0%, rgba(29,172,214,1) 50%, rgba(188,231,253,1) 100%);
+    background: -moz-linear-gradient(135deg, rgba(188,231,253,0.7455357142857143) 0%, rgba(29,172,214,0.7511379551820728) 50%, rgba(188,231,253,1) 100%);
+    background: -webkit-linear-gradient(135deg, rgba(188,231,253,0.7455357142857143) 0%, rgba(29,172,214,0.7511379551820728) 50%, rgba(188,231,253,1) 100%);
+    background: linear-gradient(135deg, rgba(188,231,253,0.7455357142857143) 0%, rgba(29,172,214,0.7511379551820728) 50%, rgba(188,231,253,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#bce7fd",endColorstr="#bce7fd",GradientType=1);
     margin: 0;
     padding: 7rem 4rem 4rem 4rem; 
@@ -646,4 +646,51 @@ a {
     .rsvp-info-card {
         padding: 3rem;
     }
+}
+
+/* Hotel Block Pop-up Styles */
+.hotel-message-content {
+    background-color: var(--white);
+    margin: 15% auto;
+    padding: 1.5rem;
+    border: 2px solid var(--b-c-blue);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 800px) {
+    .hotel-message-content {
+        width: 80%;
+        margin: 35% auto;
+    }
+}
+
+.hotel-message-content button {
+    display: block;
+    align-self: flex-end;
+    justify-self: flex-end;
+    background-color: transparent;
+    font-size: var(--text-subtitle);
+    color: var(--footer-background);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-align: right;
+    padding: .5rem;
+    
+}
+
+.hotel-message-content h2 {
+    font-size: var(--text-heading);
+    color: var(--b-c-blue);
+    text-align: center;
+}
+
+.hotel-message-content p {
+    font-size: var(--text-normal);
+    color: var(--text-color);
+    text-align: center;
 }
